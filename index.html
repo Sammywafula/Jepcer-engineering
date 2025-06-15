@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jepcer Engineering Company</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0; padding: 0;
+      background: #f9f9f9;
+      color: #333;
+    }
+    header {
+      background-color: #004080;
+      color: white;
+      padding: 20px 10px;
+      text-align: center;
+    }
+    header img {
+      max-width: 180px;
+      height: auto;
+      margin-bottom: 10px;
+    }
+    nav {
+      background: #0066cc;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 12px 0;
+      flex-wrap: wrap;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+      padding: 6px 12px;
+      border-radius: 4px;
+      transition: background 0.3s;
+    }
+    nav a:hover {
+      background: #004080;
+    }
+    .container {
+      max-width: 1100px;
+      margin: 20px auto;
+      padding: 0 15px;
+    }
+    section {
+      background: white;
+      margin-bottom: 30px;
+      padding: 25px 30px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: #004080;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #0066cc;
+      padding-bottom: 5px;
+    }
+    p {
+      line-height: 1.6;
+      font-size: 1rem;
+    }
+    .services-list, .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center; /* Center items for better visual */
+    }
+    .service-item, .gallery-item {
+      flex: 1 1 280px; /* Adjusted for better responsiveness */
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      padding: 15px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+      background: #fafafa;
+      text-align: center;
+    }
+    .service-item img, .gallery-item img {
+      width: 100%; /* Make images fill their container */
+      height: 160px; /* Fixed height for consistency */
+      object-fit: cover; /* Crop images to fit */
+      border-radius: 6px;
+      margin-bottom: 12px;
+    }
+    .service-item h3, .gallery-item h3 {
+      margin-bottom: 10px;
+      color: #003366;
+    }
+    /* Careers form */
+    form label {
+      display: block;
+      margin: 12px 0 6px;
+      font-weight: 600;
+    }
+    form input[type="text"],
+    form input[type="email"],
+    form input[type="file"] {
+      width: 100%;
+      padding: 8px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+    form button {
+      margin-top: 15px;
+      background: #004080;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      font-size: 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    form button:hover {
+      background: #00264d;
+    }
+    /* Founder */
+    #founder {
+      text-align: center;
+    }
+    #founder img {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+      border: 4px solid #004080;
+      margin-bottom: 15px;
+    }
+    /* Contact list */
+    .contact-list {
+      list-style: none;
+      padding: 0;
+      font-size: 1.1rem;
+    }
+    .contact-list li {
+      margin-bottom: 10px;
+    }
+    .contact-list a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+    .contact-list a:hover {
+      text-decoration: underline;
+    }
+    /* Responsive */
+    @media (max-width: 700px) {
+      .services-list, .gallery {
+        flex-direction: column;
+        align-items: center; /* Center items in single column */
+      }
+      .service-item, .gallery-item {
+        flex: 0 0 90%; /* Take almost full width on small screens */
+        max-width: 400px; /* Max width to prevent overly wide items on narrow viewports */
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="https://via.placeholder.com/180x80?text=Jepcer+Logo" alt="Jepcer Engineering Company Logo" />
+    <h1>Jepcer Engineering Company</h1>
+    <div class="slogan">Precision in Mechanical Engineering</div>
+  </header>
+
+  <nav>
+    <a href="#mission-vision">Mission & Vision</a>
+    <a href="#departments">Departments</a>
+    <a href="#projects">Projects</a>
+    <a href="#work-gallery">Our Work</a>
+    <a href="#careers">Careers</a>
+    <a href="#philanthropy">Philanthropy</a>
+    <a href="#founder">Founder</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="container">
+
+    <section id="mission-vision">
+      <h2>Mission & Vision</h2>
+      <p><strong>Mission:</strong> To deliver innovative, reliable, and sustainable mechanical engineering solutions that empower industries and communities.</p>
+      <p><strong>Vision:</strong> To be a leading mechanical engineering firm recognized for excellence, innovation, and commitment to quality and safety.</p>
+    </section>
+
+    <section id="departments">
+      <h2>Our Departments & Services</h2>
+      <div class="services-list">
+        <div class="service-item">
+          <img src="https://images.unsplash.com/photo-1544216710-54a86162ae5b?auto=format&fit=crop&w=600&q=60" alt="Oil and Gas Engineering" />
+          <h3>Oil and Gas</h3>
+          <p>Comprehensive engineering solutions for upstream and midstream oil and gas projects including natural gas gathering, processing, LNG engineering, transportation, and storage. We ensure safety, efficiency, and sustainability throughout project lifecycles.</p>
+        </div>
+        <div class="service-item">
+          <img src="https://images.unsplash.com/photo-1563729909068-124b179093b7?auto=format&fit=crop&w=600&q=60" alt="Power Station Engineering" />
+          <h3>Power Station</h3>
+          <p>Design, construction, and maintenance of power generation facilities with a focus on reliability, efficiency, and compliance with environmental standards. Our team supports thermal, hydro, and renewable power projects.</p>
+        </div>
+        <div class="service-item">
+          <img src="https://images.unsplash.com/photo-1620177726488-82e4e797e88c?auto=format&fit=crop&w=600&q=60" alt="Bulk Liquid Storage" />
+          <h3>Bulk Liquid Storage</h3>
+          <p>Engineering and installation of bulk liquid storage tanks and facilities, ensuring secure, compliant, and efficient storage solutions for various industrial liquids and chemicals.</p>
+        </div>
+        <div class="service-item">
+          <img src="https://images.unsplash.com/photo-1587829286419-7b3b9b9a9d7b?auto=format&fit=crop&w=600&q=60" alt="Cross Country Piping" />
+          <h3>Cross Country Piping</h3>
+          <p>Specialized in the design, installation, and maintenance of cross-country piping systems for oil, gas, and other fluids, emphasizing durability, safety, and environmental protection.</p>
+        </div>
+        <div class="service-item">
+          <img src="https://images.unsplash.com/photo-1581091234971-d8a436e2f1e2?auto=format&fit=crop&w=600&q=60" alt="Tank Maintenance and Repair" />
+          <h3>Tank Maintenance and Repair</h3>
+          <p>Providing expert maintenance and repair services to extend the lifespan and ensure the integrity of storage tanks, minimizing downtime and operational risks.</p>
+        </div>
+        <div class="service-item">
+          <img src="https://images.unsplash.com/photo-1569428034239-f95655f4007c?auto=format&fit=crop&w=600&q=60" alt="Tank Inspection" />
+          <h3>Tank Inspection</h3>
+          <p>Comprehensive inspection services using advanced techniques to assess tank condition, identify potential issues, and ensure compliance with industry standards and safety regulations.</p>
+        </div>
+        <div class="service-item">
+          <img src="https://images.unsplash.com/photo-1588698094767-46387085a6a6?auto=format&fit=crop&w=600&q=60" alt="Heavy Lifting" />
+          <h3>Heavy Lifting</h3>
+          <p>Professional heavy lifting and rigging services for industrial equipment and structures, utilizing modern cranes and equipment to safely handle complex lifting operations.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Recent Projects</h2>
+      <div class="services-list">
+        <div class="service-item">
+          <img src="https://images.unsplash.com/photo-1549924231-f129b911e442?auto=format&fit=crop&w=600&q=60" alt="Project 1" />
+          <h3>Automated Conveyor System</h3>
+          <p>Designed and installed a fully automated conveyor system for a manufacturing plant.</p>
+        </div>
+        <div class="service-item">
+          <img src="https://images.unsplash.com/photo-1581091012184-6a5b2d3f3f2d?auto=format&fit=crop&w=600&q=60" alt="Project 2" />
+          <h3>Hydraulic Press Upgrade</h3>
+          <p>Upgraded hydraulic press machinery to improve efficiency and safety standards.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="work-gallery">
+      <h2>Our Engineering Work</h2>
+      <div class="gallery">
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=600&q=60" alt="Engineers Collaborating" />
+          <h3>Team Collaboration</h3>
+          <p>Our engineers working together on complex mechanical challenges.</p>
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1532619077245-c8c3c1a3b5b1?auto=format&fit=crop&w=600&q=60" alt="Industrial Site" />
+          <h3>Industrial Infrastructure</h3>
+          <p>Robust solutions for industrial plants and large-scale infrastructure.</p>
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1542831371-d68a9ad08092?auto=format&fit=crop&w=600&q=60" alt="Design and Blueprints" />
+          <h3>Precision Design</h3>
+          <p>Meticulous planning and detailed blueprints are at the core of our work.</p>
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1526948128573-026ee99a0ed6?auto=format&fit=crop&w=600&q=60" alt="Advanced Manufacturing" />
+          <h3>Automated Manufacturing</h3>
+          <p>Leveraging cutting-edge technology for efficient and precise fabrication.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="careers">
+      <h2>Careers</h2>
+      <p>Join our team of skilled mechanical engineers and technicians. Upload your CV to apply.</p>
+      <form action="#" method="post" enctype="multipart/form-data" onsubmit="return showThankYou();">
+        <label for="fullname">Full Name:</label>
+        <input type="text" id="fullname" name="fullname" required />
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="cv">Upload Your CV:</label>
+        <input type="file" id="cv" name="cv" accept=".pdf,.doc,.docx" required />
+
+        <button type="submit">Submit Application</button>
+      </form>
+      <div id="thankyou-message" style="display:none; color:green; margin-top:10px;">
+        Thank you for your application! We will review your CV and get in touch.
+      </div>
+    </section>
+
+    <section id="philanthropy">
+      <h2>Philanthropic Activities</h2>
+      <p>We support education and skills development initiatives in mechanical engineering to empower youth and communities.</p>
+    </section>
+
+    <section id="founder">
+      <h2>Meet the Founder</h2>
+      <img src="https://via.placeholder.com/180" alt="Founder Photo" id="founder-photo" />
+      <p><strong>[Founder Name]</strong><br />Experienced mechanical engineer passionate about innovation and quality engineering solutions.</p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <ul class="contact-list">
+        <li><strong>Email:</strong> <a href="mailto:info@jepcerengineering.com">info@jepcerengineering.com</a></li>
+        <li><strong>Call:</strong> <a href="tel:+254112843114">+254 11 284 3114</a></li>
+        <li><strong>WhatsApp:</strong> <a href="https://wa.me/254112843114" target="_blank" rel="noopener">+254 11 284 3114</a></li>
+        <li><strong>Telegram:</strong> <a href="https://t.me/+254112843114" target="_blank" rel="noopener">+254 11 284 3114</a></li>
+        <li><strong>Address:</strong> 123 Industrial Park, Nairobi, Kenya</li>
+      </ul>
+    </section>
+
+  </div>
+
+  <script>
+    function showThankYou() {
+      document.getElementById('thankyou-message').style.display = 'block';
+      setTimeout(() => {
+        document.getElementById('thankyou-message').style.display = 'none';
+      }, 5000);
+      return false; // prevent actual form submission
+    }
+  </script>
+</body>
+</html>
